@@ -1,0 +1,32 @@
+name: HardcoreTeams
+version: 1.0.0
+main: com.enderdevelopment.plugin.Main
+author: EnderDevelopment
+description: A hardcore server plugin with team management and item limits
+api-version: "1.21"
+commands:
+  team:
+    description: Team management commands
+    usage: /team <join|leave|set|spawn>
+    permission: hardcore.teams.team
+    permission-message: You don't have permission to use this command
+  spawn:
+    description: Teleport to your team's spawn
+    usage: /spawn
+    permission: hardcore.teams.spawn
+    permission-message: You don't have permission to use this command
+  admin:
+    description: Admin commands for team management and inventory viewing
+    usage: /admin <inventory|setteam>
+    permission: hardcore.teams.admin
+    permission-message: You don't have permission to use this command
+permissions:
+  hardcore.teams.team:
+    description: Allows team management commands
+    default: true
+  hardcore.teams.spawn:
+    description: Allows teleporting to team spawn
+    default: true
+  hardcore.teams.admin:
+    description: Allows admin commands
+    default: op
